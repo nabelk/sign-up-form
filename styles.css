@@ -17,16 +17,13 @@ body {
 }
 
 div.left-side img {
-    /* width: 35vw; */
-    /* height: 100vh; */
+    height: 100%;
 }
 
 div.right-side {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    /* width: calc(100vw - 35vw); */
-    padding-left: 5%;
     background-color: antiquewhite;
 }
 
@@ -37,7 +34,7 @@ div.right-side {
 
 div.inline {
     display: flex;
-    gap: 50px;
+    gap: 3.125rem;
     margin-bottom: 20px;
 }
 
@@ -53,9 +50,16 @@ input {
 
 div.input-box {
     background-color: white;
-    /* margin-left: -8.4%; */
     margin-bottom: 25px;
-    padding: 5px 0 5px 8.4%;
+    padding: 5px 0 5px 8%;
+}
+
+div.description {
+    padding-left: 8%;
+}
+
+.form-submit-column {
+    padding-left: 8%;
 }
 
 @media only screen and (min-height: 550px) {
@@ -73,9 +77,5 @@ div.input-box {
 
     div.right-side {
         width: calc(100vw - 35vw);
-    }
-
-    div.input-box {
-        margin-left: -8.4%;
     }
 }
