@@ -9,6 +9,7 @@
 body {
     padding:0;
     margin: 0;
+    height: 100vh;
 }
 
 #main-page {
@@ -16,15 +17,15 @@ body {
 }
 
 div.left-side img {
-    width: 35vw;
-    height: 100vh;
+    /* width: 35vw; */
+    /* height: 100vh; */
 }
 
 div.right-side {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    width: calc(100vw - 35vw);
+    /* width: calc(100vw - 35vw); */
     padding-left: 5%;
     background-color: antiquewhite;
 }
@@ -52,7 +53,29 @@ input {
 
 div.input-box {
     background-color: white;
-    margin-left: -8.4%;
+    /* margin-left: -8.4%; */
     margin-bottom: 25px;
     padding: 5px 0 5px 8.4%;
+}
+
+@media only screen and (min-height: 550px) {
+    
+    div.left-side img {
+         height: 100vh;
+    }
+}
+
+@media only screen and (min-width: 749px) {
+
+    div.left-side img {
+        width: 35vw;
+    }
+
+    div.right-side {
+        width: calc(100vw - 35vw);
+    }
+
+    div.input-box {
+        margin-left: -8.4%;
+    }
 }
