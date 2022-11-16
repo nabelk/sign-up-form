@@ -15,6 +15,7 @@ body {
     margin: 0;
     height: 100vh;
     font-family: 'Playfair Display', serif;
+    letter-spacing: 1px;
 }
 
 #main-page {
@@ -29,7 +30,7 @@ div.right-side {
     display: flex;
     flex-direction: column;
     justify-content: center;
-    background-color: antiquewhite;
+    background-color: linen;
 }
 
 .form-column {
@@ -37,30 +38,41 @@ div.right-side {
     flex-direction: column;
 }
 
-div.inline {
+.inline {
     display: flex;
     gap: 1rem;
     margin-bottom: var(--input-box-margin);
 }
 
+.input-box .inline:last-child {
+    margin-bottom: calc(var(--input-box-margin) + 10px);
+}
+
 label{
     margin-bottom: 5px;
+    font-size: 0.7rem;
+    font-weight: bolder;
+    font-family: 'Merriweather', serif;
+    color: grey;
+    cursor: pointer;
 }
 
 input {
     width: 200px;
     border-radius: 5px;
-    padding: 4px;
+    padding: 4px 6px 4px 6px;
     font-family: 'PT Sans', sans-serif;
     font-size: 1rem;
-    font-weight: 500;
+    font-weight: 600;
+    color: grey;
 }
 
 div.input-box {
     background-color: white;
     margin-bottom: 18px;
     padding: 5px 0 5px 8%;
-    border-radius: 5px;
+    border-top: solid 2px lightcoral;
+    border-bottom: solid 2px lightcoral;
 }
 
 div.description {
@@ -79,11 +91,29 @@ div.description {
     margin-bottom: var(--input-box-margin);
 }
 
-label {
-    font-size: 0.7rem;
+button[type="submit"] {
+    font-size: 1rem;
     font-weight: bold;
-    font-family: 'Merriweather', serif;
-    color:rgba(49, 94, 7, 0.932);
+    color: #FFFFFF;
+    background-color: rgb(77, 73, 73);
+    border: none;
+    border-radius: 5px;
+    padding: 12px 25px;
+    cursor: pointer;
+}
+
+button[type="submit"]:hover {
+    background-color: grey;
+}
+  
+button[type="submit"]:active {
+    background-color: rgb(53, 48, 48);
+}
+
+a {
+    color: lightcoral;
+    text-decoration: none;
+    font-weight: bold;
 }
 
 @media only screen and (min-height: 550px) {
