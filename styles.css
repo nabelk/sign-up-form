@@ -1,15 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=PT+Sans&family=Playfair+Display&display=swap');
+
 * {
     box-sizing: border-box;
 }
 
 :root{
-    font-size: 18px;
+    font-size: 16px;
+    --ft-weight: 400;
+    --input-box-margin: 20px;
 }
 
 body {
     padding:0;
     margin: 0;
     height: 100vh;
+    font-family: 'Playfair Display', serif;
 }
 
 #main-page {
@@ -34,8 +39,8 @@ div.right-side {
 
 div.inline {
     display: flex;
-    gap: 3.125rem;
-    margin-bottom: 20px;
+    gap: 1rem;
+    margin-bottom: var(--input-box-margin);
 }
 
 label{
@@ -46,20 +51,39 @@ input {
     width: 200px;
     border-radius: 5px;
     padding: 4px;
+    font-family: 'PT Sans', sans-serif;
+    font-size: 1rem;
+    font-weight: 500;
 }
 
 div.input-box {
     background-color: white;
-    margin-bottom: 25px;
+    margin-bottom: 18px;
     padding: 5px 0 5px 8%;
+    border-radius: 5px;
 }
 
 div.description {
     padding-left: 8%;
+    font-weight: var(--ft-weight);
 }
 
 .form-submit-column {
     padding-left: 8%;
+    font-weight: var(--ft-weight);
+}
+
+.input-box > h3 {
+    font-weight: lighter;
+    margin-top: var(--input-box-margin);
+    margin-bottom: var(--input-box-margin);
+}
+
+label {
+    font-size: 0.7rem;
+    font-weight: bold;
+    font-family: 'Merriweather', serif;
+    color:rgba(49, 94, 7, 0.932);
 }
 
 @media only screen and (min-height: 550px) {
@@ -71,6 +95,10 @@ div.description {
 
 @media only screen and (min-width: 749px) {
 
+    :root{
+        font-size:18px;
+    }
+
     div.left-side img {
         width: 35vw;
     }
@@ -78,4 +106,17 @@ div.description {
     div.right-side {
         width: calc(100vw - 35vw);
     }
+
+    div.inline {
+        gap: 3.125rem;
+    }
+
+}
+
+@media only screen and (min-width:950px) {
+
+    input{
+        width: 250px;
+    }
+
 }
