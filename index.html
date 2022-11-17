@@ -1,79 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign-Up Form</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Sign-Up Form</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
 
-    <div id="main-page">
-        <div class="left-side">
-            <img src="img/left-background-img.jpg" alt="">
-        </div>
+    <body>
 
-        <div class="right-side">
-            <div class="description">
-                <p>
-                    This is not a real online service!
-                    You know you need something <br> like this
-                    in your life to help realize your deepset dreams.<br>
-                    Sign up now to get started.
-                </p>
+        <div id="main-page">
 
-                <p>You know you want to.</p>
+            <div class="left-side">
+                <img src="img/left-background-img.jpg" alt="abstract painting">
             </div>
 
-            <div class="form">
-                <form action="http://httpbin.org/post" method="post">
+            <div class="right-side">
 
-                    <div class="input-box">
-                        <h3>Let's do this</h3>
-                        <div class="inline">
-                            <div class="form-column">
-                                <label for="first-name">FIRST NAME</label>
-                                <input type="text" name="first-name" id="first-name">
-                            </div>
-                            <div class="form-column">
-                                <label for="last-name">LAST NAME</label>
-                                <input type="text" name="last-name" id="last-name">
-                            </div>
-                        </div>
-                        <div class="inline">
-                            <div class="form-column">
-                                <label for="email">EMAIL</label>
-                                <input type="email" name="email" id="email">
-                            </div>
-                            <div class="form-column">
-                                <label for="phone-num">PHONE NUMBER</label>
-                                <input type="tel" name="phone-num" id="phone-num">
-                            </div>
-                        </div>
-                        <div class="inline">
-                            <div class="form-column">
-                                <label for="password">PASSWORD</label>
-                                <input type="password" name="password" id="password">
-                            </div>
-                            <div class="form-column">
-                                <label for="confirm-password">CONFIRM PASSWORD</label>
-                                <input type="password" name="confirm-password" id="confirm-password">
-                            </div>
-                        </div>
-                    </div>
+                <div class="description">
+                    <p>
+                        This is not a real online service!
+                        You know you need something like this
+                        <br> in your life to help realize your deepset dreams.<br>
+                        Sign up now to get started.
+                    </p>
 
-                    <div class="form-submit-column">
-                        <button type="submit">Create Account</button>
-                        <p>Already have an account? <a href="">Log in</a></p>
-                    </div>
-                </form>
+                    <p>You know you want to.</p>
+                </div>
+
+                <div class="form">
+                    <form action="http://httpbin.org/post" method="post" id="form">
+
+                        <div class="input-box">
+                            <h3>Let's do this!</h3>
+                            <div class="inline">
+                                <div class="form-column">
+                                    <label for="first-name">FIRST NAME</label>
+                                    <input type="text" name="first-name" id="first-name">
+                                </div>
+                                <div class="form-column">
+                                    <label for="last-name">LAST NAME</label>
+                                    <input type="text" name="last-name" id="last-name">
+                                </div>
+                            </div>
+                            <div class="inline">
+                                <div class="form-column">
+                                    <label for="email">EMAIL</label>
+                                    <input type="email" name="email" id="email">
+                                </div>
+                                <div class="form-column">
+                                    <label for="phone-num">PHONE NUMBER</label>
+                                    <input type="tel" name="phone-num" id="phone-num">
+                                </div>
+                            </div>
+                            <div class="inline">
+                                <div class="form-column">
+                                    <label for="password">PASSWORD</label>
+                                    <input type="password" name="password" id="password">
+                                </div>
+                                <div class="form-column">
+                                    <label for="confirm-password">CONFIRM PASSWORD</label>
+                                    <input type="password" name="confirm-password" id="confirm-password">
+                                </div>
+                            </div>
+                        </div>
+
+                    </form>
+                </div>
+
+                <div class="form-submit-column">
+                    <button onclick="getElementById('form').submit()" type="submit">Create Account</button>
+                    <p>Already have an account? <a href="">Log in</a></p>
+                </div>
+
             </div>
 
         </div>
-    </div>
 
-
-    
-</body>
+    </body>
 </html>
