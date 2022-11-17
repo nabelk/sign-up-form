@@ -8,6 +8,7 @@
     font-size: 16px;
     --ft-weight: 400;
     --input-box-margin: 20px;
+    --input-width: 200px;
 }
 
 body {
@@ -29,7 +30,7 @@ div.left-side img {
 div.right-side {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-evenly;
     background-color: linen;
 }
 
@@ -58,7 +59,7 @@ label{
 }
 
 input {
-    width: 200px;
+    width: var(--input-width);
     border-radius: 5px;
     padding: 4px 6px 4px 6px;
     font-family: 'PT Sans', sans-serif;
@@ -69,7 +70,7 @@ input {
 
 div.input-box {
     background-color: white;
-    margin-bottom: 18px;
+    margin: 5px 0;
     padding: 5px 0 5px 8%;
     border-top: solid 2px lightcoral;
     border-bottom: solid 2px lightcoral;
@@ -116,6 +117,12 @@ a {
     font-weight: bold;
 }
 
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+/* Media queries for laptop */
+
 @media only screen and (min-height: 550px) {
     
     div.left-side img {
@@ -146,7 +153,35 @@ a {
 @media only screen and (min-width:950px) {
 
     input{
-        width: 250px;
+        width: calc(var(--input-width) + 50px);
+    }
+
+}
+
+/* Media query for monitor */
+
+@media only screen and (min-width:1400px) {
+    :root{
+        font-size: 23px;
+    }
+
+    input {
+        width: calc(var(--input-width) + 150px);
+    }
+
+    @media only screen and (max-height: 718px) {
+    
+        div.left-side img {
+             height: 100%;
+        }
+
+    }
+}
+
+@media only screen and (min-height: 800px) {
+    
+    :root{
+        font-size: 23px;
     }
 
 }
