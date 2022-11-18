@@ -30,47 +30,49 @@
                 </div>
 
                 <div class="form">
-                    <form action="http://httpbin.org/post" method="post" id="form">
+                    <form action="http://httpbin.org/post" method="post">
 
                         <div class="input-box">
                             <h3>Let's do this!</h3>
                             <div class="inline">
                                 <div class="form-column">
                                     <label for="first-name">FIRST NAME</label>
-                                    <input type="text" name="first-name" id="first-name">
+                                    <input type="text" name="first-name" id="first-name" required />
                                 </div>
                                 <div class="form-column">
                                     <label for="last-name">LAST NAME</label>
-                                    <input type="text" name="last-name" id="last-name">
+                                    <input type="text" name="last-name" id="last-name" required />
                                 </div>
                             </div>
                             <div class="inline">
                                 <div class="form-column">
                                     <label for="email">EMAIL</label>
-                                    <input type="email" name="email" id="email">
+                                    <input type="email" name="email" id="email" required />
                                 </div>
                                 <div class="form-column">
                                     <label for="phone-num">PHONE NUMBER</label>
-                                    <input type="tel" name="phone-num" id="phone-num">
+                                    <input type="tel" name="phone-num" id="phone-num" required />
                                 </div>
                             </div>
                             <div class="inline">
                                 <div class="form-column">
                                     <label for="password">PASSWORD</label>
-                                    <input type="password" name="password" id="password">
+                                    <input type="password" name="password" id="password" required />
                                 </div>
                                 <div class="form-column">
                                     <label for="confirm-password">CONFIRM PASSWORD</label>
-                                    <input type="password" name="confirm-password" id="confirm-password">
+                                    <input type="password" name="confirm-password" id="confirm-password" required />
                                 </div>
                             </div>
                         </div>
+
+                        <input type="submit" id="form" style="display: none;">
 
                     </form>
                 </div>
 
                 <div class="form-submit-column">
-                    <button onclick="getElementById('form').submit()" type="submit">Create Account</button>
+                    <button onclick="getElementById('form').click()" type="submit">Create Account</button>
                     <p>Already have an account? <a href="">Log in</a></p>
                 </div>
 
