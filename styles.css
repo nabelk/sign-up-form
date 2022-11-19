@@ -23,9 +23,57 @@ body {
     display: flex;
 }
 
+/* Left side of main page */
+
+div.left-side {
+    position: relative;
+}
+
 div.left-side img {
     height: 100%;
 }
+
+.logo-section {
+    position: absolute;
+    bottom: 60%;
+    background-color: black;
+    width: 100%;
+    height: 20%;
+    opacity: 0.4;
+}
+
+div.logo-text {
+    height: 20%;
+    position: absolute;
+    bottom: 60%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-right: 50px;
+}
+
+.logo-text div:nth-child(2){
+    color:white;
+    font-size: 3rem;
+    padding-bottom: 10px;
+}
+
+/* svg{
+    position: absolute;
+    left: 10%;
+    top: 20%;
+} */
+/* 
+.left-side > div:nth-child(4) {
+    position: absolute;
+    color: white;
+    bottom: 66%;
+    left: 40%;
+    font-size: 2rem;
+} */
+
+/* Right side of main page */
 
 div.right-side {
     display: flex;
@@ -34,9 +82,31 @@ div.right-side {
     background-color: linen;
 }
 
-.form-column {
-    display: flex;
-    flex-direction: column;
+div.description {
+    padding-left: 8%;
+    font-weight: var(--ft-weight);
+}
+
+.description p:last-child {
+    margin-bottom: 0;
+}
+
+div.input-box {
+    background-color: white;
+    margin: 5px 0;
+    padding: 5px 0 5px 8%;
+    border-top: solid 2px lightcoral;
+    border-bottom: solid 2px lightcoral;
+}
+
+.input-box > h3 {
+    font-weight: lighter;
+    margin-top: var(--input-box-margin);
+    margin-bottom: var(--input-box-margin);
+}
+
+.input-box .inline:last-child {
+    margin-bottom: calc(var(--input-box-margin) + 10px);
 }
 
 .inline {
@@ -45,8 +115,9 @@ div.right-side {
     margin-bottom: var(--input-box-margin);
 }
 
-.input-box .inline:last-child {
-    margin-bottom: calc(var(--input-box-margin) + 10px);
+.form-column {
+    display: flex;
+    flex-direction: column;
 }
 
 label{
@@ -70,28 +141,27 @@ input {
     box-shadow: rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
 }
 
-div.input-box {
-    background-color: white;
-    margin: 5px 0;
-    padding: 5px 0 5px 8%;
-    border-top: solid 2px lightcoral;
-    border-bottom: solid 2px lightcoral;
+input:focus{
+    box-shadow: rgb(144, 170, 99) 0px 0px 0px 3px;
+    outline: none;
 }
 
-div.description {
-    padding-left: 8%;
-    font-weight: var(--ft-weight);
+input:valid {
+    background-color: none;
+}
+
+input:-webkit-autofill {
+    -webkit-text-fill-color: grey;
+    -webkit-box-shadow: 0 0 0 30px white inset,rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+}
+
+input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0 30px white inset,rgb(144, 170, 99) 0px 0px 0px 3px;
 }
 
 .form-submit-column {
     padding-left: 8%;
     font-weight: var(--ft-weight);
-}
-
-.input-box > h3 {
-    font-weight: lighter;
-    margin-top: var(--input-box-margin);
-    margin-bottom: var(--input-box-margin);
 }
 
 button[type="submit"] {
@@ -117,28 +187,6 @@ a {
     color: lightcoral;
     text-decoration: none;
     font-weight: bold;
-}
-
-.description p:last-child {
-    margin-bottom: 0;
-}
-
-input:focus{
-    box-shadow: rgb(144, 170, 99) 0px 0px 0px 3px;
-    outline: none;
-}
-
-input:valid {
-    background-color: none;
-}
-
-input:-webkit-autofill {
-    -webkit-text-fill-color: grey;
-    -webkit-box-shadow: 0 0 0 30px white inset,rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
-}
-
-input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0 30px white inset,rgb(144, 170, 99) 0px 0px 0px 3px;
 }
 
 /* Media queries for laptop */
