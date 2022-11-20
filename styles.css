@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=PT+Sans&family=Playfair+Display&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300&family=PT+Sans&family=Playfair+Display&family=Major+Mono+Display&display=swap');
 
 * {
     box-sizing: border-box;
@@ -35,43 +35,35 @@ div.left-side img {
 
 .logo-section {
     position: absolute;
-    bottom: 60%;
+    bottom: 50%;
     background-color: black;
     width: 100%;
-    height: 20%;
+    height: 35%;
     opacity: 0.4;
 }
 
 div.logo-text {
-    height: 20%;
+    height: 35%;
     position: absolute;
-    bottom: 60%;
+    bottom: 53%;
     width: 100%;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-right: 50px;
+}
+
+svg{
+    width: 10rem;
+    height: 10rem;
 }
 
 .logo-text div:nth-child(2){
     color:white;
-    font-size: 3rem;
-    padding-bottom: 10px;
+    font-size: 2.5rem;
+    font-family: 'Major Mono Display', monospace;
+    font-weight: bolder;
 }
-
-/* svg{
-    position: absolute;
-    left: 10%;
-    top: 20%;
-} */
-/* 
-.left-side > div:nth-child(4) {
-    position: absolute;
-    color: white;
-    bottom: 66%;
-    left: 40%;
-    font-size: 2rem;
-} */
 
 /* Right side of main page */
 
@@ -85,6 +77,10 @@ div.right-side {
 div.description {
     padding-left: 8%;
     font-weight: var(--ft-weight);
+}
+
+div.description p:first-child{
+    width: 80%;
 }
 
 .description p:last-child {
@@ -109,13 +105,13 @@ div.input-box {
     margin-bottom: calc(var(--input-box-margin) + 10px);
 }
 
-.inline {
+div.inline {
     display: flex;
     gap: 1rem;
     margin-bottom: var(--input-box-margin);
 }
 
-.form-column {
+div.form-column {
     display: flex;
     flex-direction: column;
 }
@@ -159,7 +155,7 @@ input:-webkit-autofill:focus {
     -webkit-box-shadow: 0 0 0 30px white inset,rgb(144, 170, 99) 0px 0px 0px 3px;
 }
 
-.form-submit-column {
+div.form-submit-column {
     padding-left: 8%;
     font-weight: var(--ft-weight);
 }
@@ -198,7 +194,7 @@ a {
     }
 }
 
-@media only screen and (min-width: 749px) {
+@media only screen and (min-width: 1143px) {
 
     :root{
         font-size:18px;
@@ -218,7 +214,7 @@ a {
 
 }
 
-@media only screen and (min-width:950px) {
+@media only screen and (min-width:1143px) {
 
     input{
         width: calc(var(--input-width) + 50px);
@@ -234,7 +230,7 @@ a {
     }
 
     input {
-        width: calc(var(--input-width) + 150px);
+        width: calc(var(--input-width) + 180px);
     }
 
     @media only screen and (max-height: 718px) {
@@ -250,6 +246,94 @@ a {
     
     :root{
         font-size: 23px;
+    }
+
+}
+
+/* Media query for make it responsive on any width/height size */
+
+@media only screen and (max-width: 1142px) {
+
+    :root {
+        font-size: 22px;
+    }
+    
+    #main-page{
+        flex-direction: column;
+    }
+
+    div.left-side img, div.logo-section {
+        display: none;
+    }
+
+    div.logo-text {
+        position: static;
+        width: 100%;
+        flex-direction: row;
+        background-image: url("img/left-background-img.jpg");
+    }
+
+    div.right-side {
+        width:100%;
+    }
+
+    div.description{
+        padding-left: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center ;
+    }
+
+    div.description p:first-child {
+        width:70%;
+    }
+
+    div.description p:last-child {
+        width: 70%;
+        margin: 0 0 23px 0;
+    }
+
+    div.input-box, div.form-submit-column {
+        padding-left: 15%;
+    }
+
+    div.inline {
+        flex-direction: column;
+        gap:0;
+        margin-bottom: 0;
+    }
+
+    div.form-column{
+        margin-bottom: 15px;
+    }
+
+    div.inline:last-child .form-column:last-child {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    input {
+        width: 80%;
+    }
+
+    div.form-submit-column {
+        margin-top: 23px;
+    }
+
+}
+
+/* Media query for mobile */
+
+@media only screen and (max-width:448px) {
+     
+    :root {
+        font-size: 16px;;
+    }
+
+    div.logo-text {
+        flex-direction: column;
+        padding-bottom: 10%;
     }
 
 }
