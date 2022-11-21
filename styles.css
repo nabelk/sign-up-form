@@ -53,7 +53,7 @@ div.logo-text {
     align-items: center;
 }
 
-svg{
+div.logo-text svg{
     width: 10rem;
     height: 10rem;
 }
@@ -148,11 +148,11 @@ input:valid {
 
 input:-webkit-autofill {
     -webkit-text-fill-color: grey;
-    -webkit-box-shadow: 0 0 0 30px white inset,rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
+    box-shadow: 0 0 0 30px white inset,rgba(255, 255, 255, 0.2) 0px 0px 0px 1px inset, rgba(0, 0, 0, 0.9) 0px 0px 0px 1px;
 }
 
 input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0 30px white inset,rgb(144, 170, 99) 0px 0px 0px 3px;
+    box-shadow: 0 0 0 30px white inset,rgb(144, 170, 99) 0px 0px 0px 3px;
 }
 
 div.form-submit-column {
@@ -179,10 +179,48 @@ button[type="submit"]:active {
     background-color: rgb(53, 48, 48);
 }
 
-a {
+button[type="submit"]:disabled{
+    cursor: not-allowed;
+}
+
+.form-submit-column a {
     color: lightcoral;
     text-decoration: none;
     font-weight: bold;
+}
+
+footer {
+    width: 33vw;
+    position: absolute;
+    bottom: 2%;
+    text-align: center;
+    font-size: 0.8rem;
+    color: white;
+    font-family: serif;
+    font-weight: bolder;
+}
+
+footer a {
+    color: white;
+    font-size: 0.8rem;
+}
+
+footer svg {
+    width: 1.3rem;
+    height: auto;
+    fill:white;
+    position: absolute;
+    bottom: 0.5px;
+    margin-left: 4px;
+}
+
+footer svg:hover {
+    fill:red;
+    border-radius: 10px;
+}
+
+footer svg:active {
+    fill: lightpink;
 }
 
 /* Media queries for laptop */
@@ -319,6 +357,10 @@ a {
 
     div.form-submit-column {
         margin-top: 23px;
+    }
+
+    footer {
+        display:none;
     }
 
 }
